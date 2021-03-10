@@ -50,6 +50,6 @@ const user = userJoin(socket.id, username, room)
 
   })
 })
-server.listen(PORT, ()=>
+app.listen(PORT, ()=>
 console.log(`Server Running on Port ${PORT}`)
 );
