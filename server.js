@@ -5,7 +5,7 @@ const socketio = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 5000 || process.env.PORT;
+
 const io = socketio(server);
 const formatMessage = require('./utils/messages')
 const {userJoin,getCurrentUser,userleaves,getroomusers} = require('./utils/users')
@@ -50,6 +50,6 @@ const user = userJoin(socket.id, username, room)
 
   })
 })
-app.listen(PORT, ()=>
-console.log(`Server Running on Port ${PORT}`)
+app.listen(process.env.PORT || 5000, ()=>
+console.log(`Server Running on Port ${process.env.PORT}`)
 );
