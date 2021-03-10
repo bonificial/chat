@@ -27,9 +27,6 @@ const user = userJoin(socket.id, username, room)
             .room)})
   })
 
-
-
-
   //Listen for message
   socket.on('chatMessage', (msg)=>{
     const user = getCurrentUser(socket.id);
@@ -50,6 +47,6 @@ const user = userJoin(socket.id, username, room)
 
   })
 })
-app.listen(process.env.PORT || 5000, ()=>
-console.log(`Server Running on Port ${process.env.PORT}`)
+server.listen(process.env.PORT || 3000, ()=>
+console.log(`Server Running on Port`, process.env.PORT || 3000)
 );
