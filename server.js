@@ -5,7 +5,7 @@ const socketio = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 3000 || process.env.PORT;
+const PORT = 5000 || process.env.PORT;
 const io = socketio(server);
 const formatMessage = require('./utils/messages')
 const {userJoin,getCurrentUser,userleaves,getroomusers} = require('./utils/users')
